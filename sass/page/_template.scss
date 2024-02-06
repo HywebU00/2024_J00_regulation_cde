@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(../images/body_bg.jpg) no-repeat left top;
+  background-size: 100% auto;
+  &.noscroll {
+    position: static !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
+    overflow-y: hidden !important;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// 最外圍預設為100%
+.wrapper {
+  width: 100%;
+  margin: 0px auto;
+  @include screen('mobile') {
+    background: #fff;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: $container-max; //請看_variable.scss
+}
+
+.main {
+  position: relative;
+  margin: 0 auto;
+  // 可先設定一個中央區塊最大寬，限制accesskey對齊
+  h2 {
+    line-height: 1.375em;
+  }
+}
+h2.title {
+  font-size: 1.875em;
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.5em;
+  color: $primaryColor;
+  position: relative;
+  // display: inline-block;
+  // float: left;
+  &:before {
+    content: '';
+    width: 2.2em;
+    height: 4px;
+    background: $secondaryColor;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    // margin-left: -1.1em;
+  }
+  @include screen('tablet') {
+    // float: none;
+    margin: 0.5rem 0;
+  }
+}
+.cp {
+  h2.title {
+    font-size: 1.875em;
+    margin: 0 0 1.2rem;
+    color: $primaryColor;
+    // padding-bottom: 0;
+    // float: left;
+    // &:before {
+    //   display: none;
+    // }
+    @include screen('tablet') {
+      // float: none;
+      margin: 0.5rem 0;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+  background-image: url('../images/innerpage_bg.jpg');
+  background-position: center top 2em;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: 100% auto;
+  padding-bottom: 2em;
+  min-height: 100vh;
+  @include screen('mobile') {
+    padding-top: 3.7em;
+    background-position: center top 5em;
+  }
+
+  > .container {
+    @include gutter(80px); //gutter 代表左右要留白
+    display: flex;
+    @include screen('xs_mobile') {
+      @include gutter(40px);
+    }
+  }
+  .center_block {
+    flex: none;
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .left_block {
+    flex: none;
+    flex-basis: 240px;
+    max-width: 240px;
+    margin-right: 40px;
+    &.hidden {
+      + .center_block {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+    + .center_block {
+      flex: auto;
+      flex-basis: calc(100% - 280px);
+      max-width: calc(100% - 280px);
+    }
+    @include screen('tablet') {
+      display: none;
+      + .center_block {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  &.small_size {
+    font-size: 0.938em;
+  }
+  &.large_size {
+    font-size: 1.125em;
+  }
+}
+
+.hidden {
+  display: none;
+}

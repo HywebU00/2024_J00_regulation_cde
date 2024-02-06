@@ -1,0 +1,50 @@
+.breadcrumb {
+  padding: 0.1em 0;
+  margin: 0px auto 30px;
+  background-color: $primaryColor;
+  @include screen('tablet') {
+    margin: 0px auto 10px;
+  }
+
+  ul {
+    @include li-reset;
+    max-width: $container-max;
+    margin: 0 auto;
+    font-size: 0.938em;
+    padding-left: 40px;
+    padding-right: 40px;
+    @include screen('mobile') {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &:before {
+      content: '現在位置：';
+      color: #fff;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0px 0.1em 0.1em 0px;
+      color: #fff;
+      &:before {
+        @extend %slash;
+      }
+      &:first-child:before {
+        content: '';
+        display: inline-block;
+        color: #666;
+        margin-left: 0;
+        padding: 0;
+      }
+    }
+  }
+  a {
+    @include aSetting_nocolor;
+    color: #fff;
+    min-height: 2.5em;
+    line-height: 2.5em;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
