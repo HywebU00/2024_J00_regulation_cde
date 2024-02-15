@@ -87,7 +87,30 @@ table {
 .table_list {
   margin: 1em 0 2em;
   table {
+    tr {
+      &:hover,
+      &:focus {
+        border: 2px solid $lightColor;
+      }
+    }
     background: #fff;
+    td {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+        }
+        a {
+          text-decoration: underline;
+          color: darken($primaryColor, 10%);
+          display: block;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
   @include screen('xs_mobile') {
     background-color: transparent !important; //Force table to not be like tables anymore

@@ -237,3 +237,48 @@ $(function () {
       $(this).parent('li').stop().toggleClass('open');
     });
 });
+
+//expansile
+$(function () {
+  var _window = $(window);
+
+  var _expansile = $('.expansile');
+  const textLess = '收合';
+  const textAll = '更多';
+
+  _expansile.addClass('partial').wrapInner('<div class="innerPart"></div>');
+  var hPartial = _expansile.height();
+  _expansile.append('<button class="readAll"></button>');
+
+  _expansile.each(function () {
+    let _this = $(this);
+    let _readAll = _this.find('.readAll').text(textAll);
+    let hFull;
+    _readAll.click(function () {
+      if (_this.hasClass('partial')) {
+        hFull = _this.find('.innerPart').innerHeight();
+        _this.animate({ height: hFull }, 500, function () {
+          _this.removeClass('partial');
+          _readAll.text(textLess);
+        });
+      } else {
+        _this.animate({ height: hPartial }, 500, function () {
+          _this.addClass('partial');
+          _readAll.text(textAll);
+        });
+      }
+    });
+  });
+
+  function resetHeight() {
+    _expansile.removeAttr('style');
+  }
+
+  var winResizeTimer;
+  _window.resize(function () {
+    clearTimeout(winResizeTimer);
+    winResizeTimer = setTimeout(function () {
+      resetHeight();
+    }, 200);
+  });
+});

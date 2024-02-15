@@ -3653,7 +3653,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   left: 0;
   width: 100%;
   z-index: 999;
-  background-color: #fff;
+  background-color: #082f63;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .menu.sticky:after {
@@ -3670,6 +3670,12 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   max-width: 1400px;
   margin: 0 auto;
 }
+.menu.sticky a {
+  color: #fff;
+}
+.menu.sticky a:hover, .menu.sticky a:focus {
+  color: #f4a165;
+}
 @media screen and (max-width: 767px) {
   .menu {
     display: none;
@@ -3681,7 +3687,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: center;
   max-width: 1400px;
 }
 .menu > ul > li {
@@ -3689,7 +3695,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 }
 .menu > ul > li > a {
   display: block;
-  padding: 0 1em 0;
+  padding: 0 1.5em 0;
   min-height: 2.5em;
   font-weight: bold;
   line-height: 2.5em;
@@ -4636,8 +4642,8 @@ footer {
   text-align: left;
   font-size: 0.813em;
   padding: 1em 0;
+  background-color: #f0f3f4;
   position: relative;
-  border-top: solid 1px #ddd;
 }
 footer:before, footer:after {
   content: "";
@@ -4678,7 +4684,7 @@ footer .footer_logo {
   flex-basis: 320px;
 }
 footer .footer_logo img {
-  width: 250px;
+  width: 280px;
   height: auto;
   margin-top: 0.5em;
 }
@@ -4713,10 +4719,10 @@ footer .footer_info {
 }
 footer .footer_info .infoblock {
   flex: 1 1 auto;
-  margin: 0 0% 10px;
+  margin: 0;
 }
 footer p {
-  margin: 0 0 10px;
+  margin: 0;
   padding: 0;
   line-height: 1.6em;
   word-break: break-all;
@@ -7031,6 +7037,22 @@ table .date {
 .table_list table {
   background: #fff;
 }
+.table_list table tr:hover, .table_list table tr:focus {
+  border: 2px solid #99bcdc;
+}
+.table_list table td ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.table_list table td ul a {
+  text-decoration: underline;
+  color: #093a7b;
+  display: block;
+}
+.table_list table td ul a:hover {
+  text-decoration: none;
+}
 @media screen and (max-width: 575px) {
   .table_list {
     background-color: transparent !important;
@@ -7322,7 +7344,7 @@ table .date {
 .lp .list > ul > li > a:hover,
 .lp .list ol > li > a:hover {
   color: #f08436;
-  background-color: #f4f4f4;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .lp .list > ul > li > a .num,
 .lp .list ol > li > a .num {
@@ -7343,14 +7365,15 @@ table .date {
 }
 .lp .list > ul > li .title .new,
 .lp .list ol > li .title .new {
-  background-color: #f7924d;
+  background-color: #d04500;
   color: #fff;
-  padding: 0.1em 0.5em;
-  border-radius: 5px;
+  padding: 0.3em 0.5em 0.2em;
+  border-radius: 3px;
   margin-left: 1em;
   font-style: normal;
-  font-size: 0.938em;
+  font-size: 0.875em;
   display: inline-block;
+  line-height: 1em;
 }
 .lp .list > ul > li span.dept,
 .lp .list ol > li span.dept {
@@ -7392,6 +7415,63 @@ table .date {
 }
 .lp .detail_num {
   margin-bottom: 0.1em;
+}
+
+.expansile {
+  position: relative;
+  overflow: hidden;
+  padding: 1em 0 0;
+  margin: 0;
+  height: auto !important;
+}
+.expansile.partial {
+  height: 23em !important;
+}
+.expansile .list {
+  padding: 0;
+  margin: 1em 0;
+}
+.expansile .readAll {
+  position: absolute;
+  top: 0em;
+  right: 0;
+  line-height: 1.6;
+  padding: 0.2em 0.8em 0.2em 26px;
+  margin: 0;
+  font-size: 0.875em;
+  color: #fff;
+  border-radius: 1em;
+  border: none;
+  transition: 0.2s;
+  background-color: #333;
+  cursor: pointer;
+  z-index: 9;
+}
+.expansile .readAll:hover {
+  background-color: #0d50aa;
+}
+.expansile .readAll::before {
+  content: "";
+  display: inline-block;
+  margin: 0 auto;
+  width: 6px;
+  height: 6px;
+  border-width: 2px;
+  border-color: #fff;
+  border-style: solid;
+  border-left: none;
+  border-top: none;
+  transform: rotate(225deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  left: 12px;
+  top: 0.85em;
+  transition: 0.3s;
+}
+.expansile.partial .readAll::before {
+  transform: rotate(45deg);
+  top: 0.6em;
 }
 
 .sub_menu ul,
@@ -9752,7 +9832,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .publish_info {
   line-height: 1.5em;
   list-style: none;
-  padding: 0.3em;
+  padding: 0.5em 0.3em;
   margin: 0.5em 0 1.5em 0;
   display: flex;
   flex-wrap: wrap;
@@ -9764,10 +9844,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   flex: 0 0 auto;
   margin-bottom: 0em !important;
   margin-right: 0.8em;
-  padding: 0.2em 1em 0.2em 2.2em;
+  padding: 0 1em 0 2.2em;
   position: relative;
   font-size: 0.938em;
-  flex: 0 1 30%;
+  flex: 0 1 48%;
 }
 @media screen and (max-width: 1399px) {
   .publish_info li {
@@ -9788,7 +9868,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border: 2px solid #ddd;
   position: absolute;
   left: 1em;
-  top: 0.6em;
+  top: 0.4em;
 }
 .publish_info li:only-child {
   margin-bottom: 0em;
@@ -10295,7 +10375,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   transition: 0.5s;
   border: 2px solid #fff;
 }
-.pictext_list_block .pictext_list:hover {
+.pictext_list_block .pictext_list a {
+  color: #1a1a1a;
+}
+.pictext_list_block .pictext_list:hover, .pictext_list_block .pictext_list:focus {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border: 2px solid #99bcdc;
 }
@@ -10410,6 +10493,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .pictext_list_block .doc_release ul li span.th_title {
   flex: 0 0 5em;
   font-weight: bold;
+  text-align: right;
 }
 .pictext_list_block .doc_release ul li .tag {
   background: #fde1cd;

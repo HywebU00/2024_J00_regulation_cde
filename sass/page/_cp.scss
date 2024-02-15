@@ -348,7 +348,7 @@
 .publish_info {
   line-height: 1.5em;
   list-style: none;
-  padding: 0.3em;
+  padding: 0.5em 0.3em;
   margin: 0.5em 0 1.5em 0;
   display: flex;
   flex-wrap: wrap;
@@ -361,12 +361,12 @@
     margin-bottom: 0em !important;
     margin-right: 0.8em;
     // background-color: #fff;
-    padding: 0.2em 1em 0.2em 2.2em;
+    padding: 0 1em 0 2.2em;
     // border-radius: 50px;
     // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     position: relative;
     font-size: 0.938em;
-    flex: 0 1 30%;
+    flex: 0 1 48%;
     @include screen('notebook') {
       flex: 0 1 48%;
     }
@@ -383,7 +383,7 @@
       border: 2px solid #ddd;
       position: absolute;
       left: 1em;
-      top: 0.6em;
+      top: 0.4em;
     }
     &:only-child {
       margin-bottom: 0em;

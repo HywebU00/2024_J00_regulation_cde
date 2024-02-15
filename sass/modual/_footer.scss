@@ -4,9 +4,11 @@ footer {
   text-align: left;
   font-size: 0.813em;
   padding: 1em 0;
-  // background-color: $linkColor;
+  // background-color: darken($primaryColor, 10%);
+  background-color: #f0f3f4;
+  // color: #fff;
   position: relative;
-  border-top: solid 1px #ddd;
+  // border-top: solid 1px #ddd;
 
   .container {
     position: relative;
@@ -34,7 +36,7 @@ footer {
     flex: 0 0 320px;
     flex-basis: 320px;
     img {
-      width: 250px;
+      width: 280px;
       height: auto;
       margin-top: 0.5em;
     }
@@ -69,11 +71,11 @@ footer {
     .infoblock {
       flex: 1 1 auto;
       //   flex-basis: 32%;
-      margin: 0 0% 10px;
+      margin: 0;
     }
   }
   p {
-    margin: 0 0 10px;
+    margin: 0;
     padding: 0;
     line-height: 1.6em;
     word-break: break-all;
