@@ -65,6 +65,12 @@
       }
     }
   }
+  .int {
+    color: darken($primaryColor, 10%);
+    font-size: 1.125em;
+    font-weight: bold;
+    margin: 2em 0 1em;
+  }
 }
 
 // 圖文列表
@@ -202,4 +208,14 @@
   @include screen('mobile') {
     width: auto;
   }
+}
+
+.sysint {
+  padding: 2em;
+  border-radius: 5px;
+  background-color: #fff;
+  color: $color-word;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px;
+  margin: 1em 0 3em;
+  font-size: 1em;
 }

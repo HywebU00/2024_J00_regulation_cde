@@ -1243,6 +1243,7 @@ th {
 .cp {
   font-size: 1.0666666em;
   line-height: 1.65em;
+  margin-top: 0.5em;
 }
 @media screen and (max-width: 575px) {
   .cp {
@@ -1901,27 +1902,27 @@ kbd kbd {
 }
 
 .btn-orange {
-  background: #f39852;
-  border: 1px solid #f39852;
+  background: #d04500;
+  border: 1px solid #d04500;
   color: #fff;
 }
 .btn-orange:hover {
-  background: #f07c22;
-  border: 1px solid #d1630e;
+  background: #9d3400;
+  border: 1px solid #6a2300;
   cursor: pointer;
   color: #fff;
   outline: none;
 }
 .btn-orange:focus {
-  background: #f07c22;
-  border: 1px solid #d1630e;
+  background: #9d3400;
+  border: 1px solid #6a2300;
   cursor: pointer;
   color: #fff;
   outline: none;
   box-shadow: 0 0px 0px 2px #ff3e4d !important;
 }
 .btn-orange.active {
-  background: #f5a66a;
+  background: #ea4d00;
   cursor: pointer;
 }
 
@@ -3414,7 +3415,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .searchblock {
   position: relative;
   z-index: 100;
-  margin-right: 1.5em;
+  margin-right: 3em;
 }
 @media screen and (max-width: 767px) {
   .searchblock {
@@ -3688,6 +3689,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-size: 1.125rem;
   max-width: 1400px;
 }
 .menu > ul > li {
@@ -3748,7 +3750,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   list-style: none;
   text-align: left;
   animation: showMenu 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  font-size: 0.875em;
+  font-size: 0.938rem;
 }
 .menu ul li ul li {
   float: none;
@@ -5141,10 +5143,8 @@ select::-ms-expand {
 .necessary {
   font-size: 0.875rem;
   color: #d30000;
-  padding: 1px 6px;
-  border-radius: 2px;
-  margin: 0 6px 0 0;
-  box-shadow: 0 0 0 1px #d30000 inset;
+  padding: 1px 0;
+  margin: 0 4px 0 0;
 }
 
 .flex-form {
@@ -10361,6 +10361,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .conditional_searchblock .form_col-6-6 .check_grp.form_inline label {
   flex: 1 1 40%;
 }
+.conditional_searchblock .int {
+  color: #093a7b;
+  font-size: 1.125em;
+  font-weight: bold;
+  margin: 2em 0 1em;
+}
 
 .pictext_list_block {
   margin-bottom: 2em;
@@ -10512,6 +10518,16 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   .ingredients {
     width: auto;
   }
+}
+
+.sysint {
+  padding: 2em;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #1a1a1a;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px;
+  margin: 1em 0 3em;
+  font-size: 1em;
 }
 
 @media print {

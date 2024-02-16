@@ -122,39 +122,18 @@
         <div class="breadcrumb">
           <ul>
             <li><a href="#">首頁</a></li>
-            <li>藥品</li>
+            <li>電子報訂閱/取消</li>
           </ul>
         </div>
         <!-- breadcrumb路徑 end-->
         <div class="container">
           <!-- 左側 -->
           <div class="left_block hidden">
-            <div class="leftblock_nodemenu">
-              <div class="title">標題文字</div>
-              <ul>
-                <li>
-                  <a href="#">第一層選單</a>
-                </li>
-                <li>
-                  <a href="#">第一層選單</a>
-                  <ul>
-                    <li><a href="#">第二層選單</a></li>
-                    <li><a href="#">第二層選單</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">第一層選單</a>
-                </li>
-                <li>
-                  <a href="#">第一層選單</a>
-                </li>
-              </ul>
-            </div>
+            <div class="leftblock_nodemenu">&nbsp;</div>
           </div>
           <!-- 主要內容區 -->
           <div class="center_block">
-            <!-- h2節點 -->
-            <h2 class="title">NP標題</h2>
+            <h2 class="title">電子報訂閱/取消</h2>
             <!-- function_panel -->
             <div class="function_panel">
               <!-- function功能區塊 start-->
@@ -201,51 +180,39 @@
             </div>
             <!-- function_panel -->
 
-            <!-- NP Start -->
-            <!-- 說明區塊 start -->
-            <div class="explain_block">
-              <p>
-                查驗中心於 2006 年成立醫療器材組，主要的業務範圍包括醫療器材相關之技術性資料評估及法規諮詢輔導。而協助食品藥物管理署執行之醫療器材技術性資料評估，包含醫療器材臨床試驗計畫書、臨床試驗報告、查驗登記及相關展延變更，以確保我國民眾使用安全性。
-                此外，針對重要國家型生技計畫，及生技醫藥學研產業之政府補助計畫申請案，進行醫療器材案件有關法規面的評析工作，提供相關部會與申請單位有關醫療器材計畫的法規途徑規劃建議，俾促進國內醫療器材產業發展。
-              </p>
-              <p>
-                <img src="images/pic05.jpg" alt="圖片說明" />
-                查驗中心於 2006 年成立醫療器材組，主要的業務範圍包括醫療器材相關之技術性資料評估及法規諮詢輔導。而協助食品藥物管理署執行之醫療器材技術性資料評估，包含醫療器材臨床試驗計畫書、臨床試驗報告、查驗登記及相關展延變更，以確保我國民眾使用安全性。
-                此外，針對重要國家型生技計畫，及生技醫藥學研產業之政府補助計畫申請案，進行醫療器材案件有關法規面的評析工作，提供相關部會與申請單位有關醫療器材計畫的法規途徑規劃建議，俾促進國內醫療器材產業發展。
-              </p>
-              <img src="images/pic01.jpg" alt="" />
-            </div>
-            <!-- 說明區塊 end -->
-
-            <section class="sub_menu">
-              <ul>
-                <li>
-                  <a href="#"><span class="num">1</span>藥品審查</a>
-                </li>
-                <li>
-                  <a href="#"><span class="num">2</span>細胞治療技術</a>
-                </li>
-                <li>
-                  <a href="#"><span class="num">3</span>醫療器材</a>
-                </li>
-                <li>
-                  <a href="#"><span class="num">4</span>健康食品及特殊營養食品</a>
-                </li>
-                <li>
-                  <a href="#"><span class="num">5</span>醫療科技評估</a>
-                </li>
-                <li>
-                  <a href="#"><span class="num">6</span>諮詢輔導</a>
-                </li>
-                <li>
-                  <a href="#"><span class="num">7</span>國際合作</a>
-                </li>
-                <li>
-                  <a href="#"><span class="num">8</span>中心簡介</a>
-                </li>
-              </ul>
+            <!-- LP Start -->
+            <section class="lp">
+              <!-- 條件查詢 start -->
+              <div class="conditional_searchblock">
+                <div class="int">您訂閱的電子報為一個月內的"最新法規"資訊通知。</div>
+                <form action="">
+                  <div class="flex-form">
+                    <div class="form_grp">
+                      <label for="username" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>電子信箱</label>
+                      <div class="form_content">
+                        <input type="text" id="username" placeholder="請輸入電子信箱" value="" />
+                      </div>
+                    </div>
+                    <div class="form_grp">
+                      <div class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>驗證碼</div>
+                      <div class="form_content form_inline">
+                        <img src="images/basic/captcha.gif" alt="" class="captcha" />
+                        <input name="" type="text" value="" title="請輸入驗證碼" />
+                        <button type="button" class="btn"><i class="i_reflash" aria-hidden="true" focusable="false"></i>重新整理</button>
+                        <button type="button" class="btn"><i class="i_play" aria-hidden="true" focusable="false"></i>語音播放</button>
+                      </div>
+                    </div>
+                    <div class="btn_grp form_inline">
+                      <button class="btn btn-orange">訂閱</button>
+                      <button class="btn btn-submit">取消訂閱</button>
+                      <button class="btn btn-reset">重填</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- 條件查詢 end -->
             </section>
-            <!-- NP End -->
+            <!-- LP End -->
           </div>
         </div>
       </div>

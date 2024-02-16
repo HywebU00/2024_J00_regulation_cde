@@ -219,7 +219,7 @@
 .searchblock {
   position: relative;
   z-index: 100;
-  margin-right: 1.5em;
+  margin-right: 3em;
   @include screen('mobile') {
     display: none;
   }
