@@ -3644,32 +3644,6 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   color: #f4a165;
 }
 
-.mp_searchblock {
-  position: relative;
-  margin: 0;
-  padding: 30px 10%;
-  background: url("../images/mp_search_bg.jpg") no-repeat center top;
-  background-size: cover;
-  overflow: hidden;
-  overflow: visible;
-  margin-bottom: 3em;
-}
-.mp_searchblock:before {
-  display: inline-block;
-  content: "";
-  padding-top: 25%;
-}
-.mp_searchblock img {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
 @media screen and (min-width: 1699px) {
   .mp_searchblock {
     padding: 30px 15%;
@@ -3693,6 +3667,33 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   }
 }
 .mp_searchblock .container {
+  background: url("../images/mp_search_bg.jpg") no-repeat center top;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 10%;
+  overflow: hidden;
+  overflow: visible;
+  margin-bottom: 3em;
+}
+.mp_searchblock .container:before {
+  display: inline-block;
+  content: "";
+  padding-top: 25%;
+}
+.mp_searchblock .container img {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.mp_searchblock .search {
   background: rgb(247, 201, 129);
   background: linear-gradient(180deg, rgb(247, 201, 129) 0%, rgb(243, 132, 56) 100%);
   padding: 50px;
@@ -3703,24 +3704,24 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   z-index: 9;
 }
 @media screen and (min-width: 1699px) {
-  .mp_searchblock .container {
+  .mp_searchblock .search {
     width: 70%;
     max-width: 1400px !important;
   }
 }
 @media screen and (max-width: 1399px) {
-  .mp_searchblock .container {
+  .mp_searchblock .search {
     top: 55%;
     width: 94%;
   }
 }
 @media screen and (max-width: 991px) {
-  .mp_searchblock .container {
+  .mp_searchblock .search {
     top: 48%;
   }
 }
 @media screen and (max-width: 767px) {
-  .mp_searchblock .container {
+  .mp_searchblock .search {
     padding: 0 20px;
   }
 }

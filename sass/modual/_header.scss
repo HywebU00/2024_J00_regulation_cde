@@ -473,14 +473,13 @@
 
 //search
 .mp_searchblock {
-  position: relative;
-  margin: 0;
-  padding: 30px 10%;
-  background: url('../images/mp_search_bg.jpg') no-repeat center top;
-  background-size: cover;
-  @include aspect-ratio(16, 4);
-  overflow: visible;
-  margin-bottom: 3em;
+  // position: relative;
+  // margin: 0;
+  // padding: 30px 10%;
+
+  // @include aspect-ratio(16, 4);
+  // overflow: visible;
+  // margin-bottom: 3em;
 
   @media screen and (min-width: 1699px) {
     padding: 30px 15%;
@@ -500,6 +499,18 @@
     }
   }
   .container {
+    background: url('../images/mp_search_bg.jpg') no-repeat center top;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    padding: 30px 10%;
+
+    @include aspect-ratio(16, 4);
+    overflow: visible;
+    margin-bottom: 3em;
+  }
+  .search {
     background: rgb(247, 201, 129);
     background: linear-gradient(180deg, rgba(247, 201, 129, 1) 0%, rgba(243, 132, 56, 1) 100%);
     padding: 50px;
