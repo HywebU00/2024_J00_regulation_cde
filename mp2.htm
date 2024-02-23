@@ -8,21 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>台灣藥物法規資訊網</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <!-- WOW動畫-->
+    <link href="css/animate.css" rel="stylesheet" />
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css" />
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon" />
   </head>
 
-  <body>
+  <body class="mp2">
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
     <!-- wrapper Start -->
@@ -102,57 +104,26 @@
       </header>
       <!-- header End -->
       <!-- main Start -->
-      <div id="center" class="main innerpage">
-        <!-- 內頁新增一個classname-->
+      <div id="center" class="main">
         <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
-        <!-- breadcrumb路徑 start-->
-        <div class="breadcrumb">
-          <ul>
-            <li><a href="#">首頁</a></li>
-            <li>系統簡介</li>
-          </ul>
-        </div>
-        <!-- breadcrumb路徑 end-->
-        <div class="container">
-          <!-- 左側 -->
-          <div class="left_block hidden">
-            <div class="leftblock_nodemenu">
-              <div class="title">標題文字</div>
-              <ul>
-                <li>
-                  <a href="#">第一層選單</a>
-                </li>
-                <li>
-                  <a href="#">第一層選單</a>
-                  <ul>
-                    <li><a href="#">第二層選單</a></li>
-                    <li><a href="#">第二層選單</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">第一層選單</a>
-                </li>
-                <li>
-                  <a href="#">第一層選單</a>
-                </li>
-              </ul>
+        <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+        <!-- //// class 都可以隨意命名 !!! ///// -->
+        <!-- 裝飾圖 -->
+        <section class="mp_imgblock col-12 full">&nbsp;</section>
+        <!-- 裝飾圖 end-->
+
+        <!--  藥品成分公告查詢系統 -->
+        <section class="col-12">
+          <div class="container wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s">
+            <div class="col">
+              <h2 class="c_titleBox">系統簡介</h2>
+              <div class="searchint">
+                <p>本資料庫法規公告之收載及搜尋方式以藥品成分名為主要架構，收載之法規公告則以涉及再評估、再分類、統一適應症、 仿單標準化、仿單加刊注意事項警語及各類非處方藥基準等公告之成分為主，若非屬上述各類之公告，請逕行至 衛生福利部食品藥物管理署網站查詢。</p>
+              </div>
             </div>
           </div>
-          <!-- 主要內容區 -->
-          <div class="center_block">
-            <h2 class="title">系統簡介</h2>
-
-            <!-- explain_block Start -->
-            <section class="explain_block">
-              <p>本資料庫法規公告之收載及搜尋方式以藥品成分名為主要架構，收載之法規公告則以涉及再評估、再分類、統一適應症、 仿單標準化、仿單加刊注意事項警語及各類非處方藥基準等公告之成分為主，若非屬上述各類之公告，請逕行至 衛生福利部食品藥物管理署網站查詢。</p>
-              <ul>
-                <li>主辦單位：衛生福利部食品藥物管理署</li>
-                <li>執行單位：財團法人醫藥品查驗中心</li>
-              </ul>
-            </section>
-            <!-- explain_block End -->
-          </div>
-        </div>
+        </section>
+        <!--  藥品成分公告查詢系統 end-->
       </div>
 
       <!-- footer Start-->
@@ -177,7 +148,7 @@
       </footer>
       <!-- footer End -->
     </div>
-    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <a href="javascript:;" class="scrollToTop">TOP</a>
     <!-- JQ -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <!-- 外掛 plugin js -->
@@ -191,6 +162,16 @@
     <!-- picturefill -->
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
     <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+    <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
+    <!-- fancy -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->

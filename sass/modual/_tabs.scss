@@ -1,22 +1,28 @@
 .tabSet {
   margin: 30px auto;
+  width: 100%;
 
   .tabItems {
     display: flex;
     flex-flow: row nowrap;
-    margin: 0 auto 1em;
+    margin: 0 auto 2em;
+    @include screen('mobile') {
+      margin: 0 auto 0.5em;
+    }
 
     .item {
-      flex: 1 1 auto;
+      flex: 0 1 auto;
       font-size: 1.125em;
-      height: 3em;
+      height: 3.6em;
       text-align: center;
       border: none;
       margin: 0px 3px;
       box-shadow: none;
       background: #fff;
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      border-radius: 5px;
+      // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 0;
+      min-width: 9em;
+      font-weight: bold;
       &:first-of-type {
         margin-left: 0;
       }
@@ -24,11 +30,12 @@
         margin-right: 0;
       }
       @include screen('mobile') {
-        font-size: 0.938em;
+        // font-size: 1em;
+        min-width: 32.5%;
         line-height: 1.2em;
       }
       @include screen('xs_mobile') {
-        font-size: 0.813em;
+        // font-size: 1em;
         line-height: 1em;
       }
       cursor: pointer;
@@ -38,7 +45,8 @@
       }
 
       &:hover {
-        background: $lightColor;
+        // background: $lightColor;
+        background: lighten($linkColor, 20%);
       }
 
       &.active {
@@ -46,14 +54,32 @@
         background-color: $primaryColor;
         color: #fff;
         position: relative;
+        // &:before {
+        //   content: '';
+        //   border: 10px solid $primaryColor;
+        //   border-color: $primaryColor transparent transparent transparent;
+        //   position: absolute;
+        //   left: 50%;
+        //   top: 100%;
+        //   margin-left: -5px;
+        // }
         &:before {
           content: '';
-          border: 10px solid $primaryColor;
-          border-color: $primaryColor transparent transparent transparent;
           position: absolute;
           left: 50%;
-          top: 100%;
-          margin-left: -5px;
+          bottom: 100%;
+          background-color: #f89d5e;
+          height: 10px;
+          width: 2px;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 0;
+          background-color: #fff;
+          height: 10px;
+          width: 2px;
         }
       }
     }
@@ -62,11 +88,10 @@
   .tabContent {
     display: none;
     position: relative;
-    padding: 2em;
+    padding: 0;
     // box-shadow: #bbb 0 0 0 1px inset;
     // background-color: #fff;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
     @include screen('xs_mobile') {
       padding: 1em;
     }

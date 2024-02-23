@@ -10,7 +10,7 @@
     @include li-reset;
     max-width: $container-max;
     margin: 0 auto;
-    font-size: 0.938em;
+    font-size: 1em;
     padding-left: 40px;
     padding-right: 40px;
     @include screen('mobile') {

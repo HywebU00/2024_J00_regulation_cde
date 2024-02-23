@@ -140,10 +140,13 @@
   margin: 0 auto 2em;
   @include clearfix();
   h3 {
-    font-size: 1.5em;
-    padding: 12px 0px 15px 0px;
-    margin: 0.5em 0px 0.2em;
-    border-bottom: 1px solid $primaryColor;
+    padding: 0.4em 0.5em;
+    margin: 0.5em 0px 0.3em;
+    // border-bottom: 1px solid $primaryColor;
+    background: #eee;
+    border-left: solid 5px $secondaryColor;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
   ul {
     list-style-type: none;
@@ -307,13 +310,15 @@
 
 // 外部連結
 .web_link {
-  margin: 1em 0;
+  margin: 1.5em 0 1em;
   @extend %clearfix;
   h3 {
-    font-size: 1.5em;
-    padding: 12px 0px 15px 0px;
-    margin: 0.5em 0px 0.2em;
-    border-bottom: 1px solid $primaryColor;
+    padding: 0.4em 0.5em;
+    margin: 0.5em 0px 0.3em;
+    background: #eee;
+    border-left: solid 5px $secondaryColor;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
   ol,
   ul {

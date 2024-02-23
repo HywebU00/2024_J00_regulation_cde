@@ -1,23 +1,28 @@
 // scrollTop
 .scrollToTop {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.6);
+  width: 86px;
+  height: 86px;
+  border-radius: 2px;
+  background: #cecece url(../images/top.png) no-repeat center top 20px;
+  background-size: 34px auto;
   text-align: center;
-  color: #FFF;
-  line-height: 50px;
+  color: #1b1b1b;
+  line-height: 120px;
   text-decoration: none;
   position: fixed;
   bottom: 10px;
   right: 10px;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   display: none;
   z-index: 99999999;
-  text-indent: -999999px;
-  &:hover,&:focus{
-    background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
-    box-shadow:none;
+  // text-indent: -999999px;
+  font-family: 'Jost', sans-serif;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: url(../images/top2.png) no-repeat center top 15px rgba(0, 0, 0, 0.6);
+    background-size: 34px auto;
+    box-shadow: none;
   }
 }
 
@@ -50,15 +55,10 @@
 //   a.file_#{$fileTypePic} {
 //     background: url(../images/basic/icon_#{$fileTypePic}.png) no-repeat center center;
 //     width: 26px;
-//     height: 28px;   
+//     height: 28px;
 //     font-size: 0;
 //     overflow: hidden;
 //     vertical-align: middle;
 //     background-size: contain;
 //   }
 // }
-
-
-
-
-

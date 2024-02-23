@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>台灣藥物法規資訊網</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css" />
+    <!-- WOW動畫-->
+    <link href="css/animate.css" rel="stylesheet" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body class="mp1">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <h1>
+            <a href="index.htm"><img src="images/logo.svg" alt="台灣藥物法規資訊網" /></a>
+          </h1>
+
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="Site">
+            <!-- 新增div navlist -->
+            <div class="navlist">
+              <ul>
+                <li><a href="#">網站導覽</a></li>
+              </ul>
+            </div>
+            <!-- font_size -->
+            <div class="font_size_block">
+              <button type="button" class="fontsize_btn">A</button>
+              <div class="font_size_list">
+                <ul>
+                  <li><a href="#" role="button" class="small">小</a></li>
+                  <li><a href="#" role="button" class="medium">中</a></li>
+                  <li><a href="#" role="button" class="large">大</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- Search Start -->
+            <div class="searchblock">
+              <button type="button" class="searchbtn">查詢</button>
+              <div class="searchcontent">
+                <div class="search" role="search">
+                  <div class="form_grp">
+                    <label for="mustSameAsId">搜尋</label>
+                    <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
+                    <input name="" type="submit" value="查詢" class="btn btn-search" />
+                  </div>
+                  <!-- <div class="btn_grp">
+                            <input name="" type="submit" value="進階搜尋" class="btn" />
+                          </div> -->
+                  <div class="keywordHot">
+                    <ul>
+                      <li><a href="#">熱門熱門</a></li>
+                      <li><a href="#">查詢</a></li>
+                      <li><a href="#">字詞三</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Search End -->
+          </nav>
+          <!-- navigation End -->
+          <!-- menu Start -->
+          <nav class="menu" role="navigation" aria-label="Header的導航列">
+            <ul>
+              <li>
+                <a href="#">藥品</a>
+                <!-- <ul>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                </ul> -->
+              </li>
+              <li>
+                <a href="#">醫療器材</a>
+              </li>
+              <li>
+                <a href="#">綜合查詢</a>
+              </li>
+              <li>
+                <a href="#">電子報訂閱/取消</a>
+              </li>
+              <li>
+                <a href="#">藥品成分公告查詢</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- menu End -->
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <div id="center" class="main">
+        <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
+        <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+        <!-- //// class 都可以隨意命名 !!! ///// -->
+        <!-- 綜合查詢 -->
+        <section class="mp_searchblock col-12 full">
+          <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
+            <div class="col">
+              <!-- Search Start -->
+              <div class="search" role="search">
+                <div class="form_grp">
+                  <label for="mustSameAsId">綜合查詢</label>
+                  <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" class="txtinput" />
+                  <input name="" type="submit" value="查詢" class="btn btn-search" />
+                  <input name="" type="submit" value="進階查詢" class="btn btn-search" />
+                </div>
+              </div>
+              <!-- Search end -->
+            </div>
+          </div>
+        </section>
+        <!-- 綜合查詢 end-->
+        <!-- 最新法規資訊 -->
+        <section class="col-12">
+          <div class="container">
+            <div class="col">
+              <h2 class="c_titleBox">最新法規資訊</h2>
+              <div class="c_news mp_newsBlock wow fadeInDown" data-wow-duration="1s" data-wow-delay="0s">
+                <div class="tabSet">
+                  <div class="tabItems">
+                    <button class="item">全部</button>
+                    <button class="item">藥品</button>
+                    <button class="item">醫療器材</button>
+                  </div>
+                  <div class="tabContentGroup wow fadeInDown" data-wow-duration="1s" data-wow-delay=".4s">
+                    <!-- １ -->
+                    <div class="tabContent" title="業務/法規公告">
+                      <div class="nwes_content">
+                        <div class="col">
+                          <ul>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-26</time>
+                                <div class="title">為持續推動藥品電子仿單，本署訂定「藥品採用電子仿單辦理原則」（如附件），自函告日起 ...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-23</time>
+                                <div class="title">函知「植物藥新藥查驗登記審查基準」修訂草案，惠請貴會協助轉知所屬會員，如有修正意見 ...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-21</time>
+                                <div class="title">有關公告修訂「生體相等性試驗之受託研究機構管理規範」一案，請至本署網站之「公告資訊」...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-20</time>
+                                <div class="title">針對長期專案進口或供應不穩之藥品，為鼓勵業者申請藥品許可證，請轉知所屬會員，詳如說 ...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-14</time>
+                                <div class="title">關於「人工智慧/機器學習技術之電腦輔助偵測(CADe)及電腦輔助診斷(CADx)醫療器材查驗登 ...</div>
+                              </a>
+                            </li>
+                          </ul>
+                          <div class="c_indexMore"><a href="#">更多</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="tabContent" title="藥品">
+                      <div class="nwes_content">
+                        <div class="col">
+                          <ul>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-26</time>
+                                <div class="title">藥品藥品為持續推動藥品電子仿單，本署訂定「藥品採用電子仿單辦理原則」（如附件），自函告日起 ...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-23</time>
+                                <div class="title">函知「植物藥新藥查驗登記審查基準」修訂草案，惠請貴會協助轉知所屬會員，如有修正意見 ...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-21</time>
+                                <div class="title">有關公告修訂「生體相等性試驗之受託研究機構管理規範」一案，請至本署網站之「公告資訊」...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-20</time>
+                                <div class="title">針對長期專案進口或供應不穩之藥品，為鼓勵業者申請藥品許可證，請轉知所屬會員，詳如說 ...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-14</time>
+                                <div class="title">關於「人工智慧/機器學習技術之電腦輔助偵測(CADe)及電腦輔助診斷(CADx)醫療器材查驗登 ...</div>
+                              </a>
+                            </li>
+                          </ul>
+                          <div class="c_indexMore"><a href="#">更多</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="tabContent" title="醫療器材">
+                      <div class="nwes_content">
+                        <div class="col">
+                          <ul>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-26</time>
+                                <div class="title">醫療器材為持續推動藥品電子仿單，本署訂定「藥品採用電子仿單辦理原則」（如附件），自函告日起 ...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-23</time>
+                                <div class="title">函知「植物藥新藥查驗登記審查基準」修訂草案，惠請貴會協助轉知所屬會員，如有修正意見 ...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-21</time>
+                                <div class="title">有關公告修訂「生體相等性試驗之受託研究機構管理規範」一案，請至本署網站之「公告資訊」...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-20</time>
+                                <div class="title">針對長期專案進口或供應不穩之藥品，為鼓勵業者申請藥品許可證，請轉知所屬會員，詳如說 ...</div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" id="">
+                                <time>112-09-14</time>
+                                <div class="title">關於「人工智慧/機器學習技術之電腦輔助偵測(CADe)及電腦輔助診斷(CADx)醫療器材查驗登 ...</div>
+                              </a>
+                            </li>
+                          </ul>
+                          <div class="c_indexMore"><a href="#">更多</a></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--  -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 最新法規資訊 end-->
+
+        <!--  藥品成分公告查詢系統 -->
+        <section class="col-12">
+          <div class="container wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+            <div class="col">
+              <h2 class="c_titleBox">藥品成分公告查詢系統</h2>
+              <div class="searchint">
+                <p>本資料庫法規公告之收載及搜尋方式以藥品成分名為主要架構，收載之法規公告則以涉及再評估、再分類、統一適應症、 仿單標準化、仿單加刊注意事項警語及各類非處方藥基準等公告之成分為主，若非屬上述各類之公告，請逕行至 衛生福利部食品藥物管理署網站查詢。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--  藥品成分公告查詢系統 end-->
+
+        <!--  訂閱電子報 -->
+        <section class="col-12">
+          <div class="container">
+            <div class="col">
+              <div class="sub_epaper">
+                <div class="h2title">訂閱電子報</div>
+                <ul class="epaper_icon">
+                  <li>
+                    <a href="#"><img src="images/icon_youtube.png" alt="youtube" />youtube</a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/icon_line.png" alt="line" />line</a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/icon_baby.png" alt="財團法人醫藥品查驗中心" />財團法人醫藥品查驗中心</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--  訂閱電子報 end-->
+
+        <!--  統計 -->
+        <section class="col-12 mpStat">
+          <div class="container">
+            <div class="col">
+              <!-- star -->
+              <div class="mp_achievementsBlock wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0s">
+                <div class="listBox achievement_slider">
+                  <!-- 1 -->
+                  <div class="item">
+                    <div class="staticon"><img src="images/mpstat_icon1.png" alt="" /></div>
+                    <div class="info">
+                      <div class="title">法規筆數</div>
+                      <div class="num num01">104</div>
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="item">
+                    <div class="staticon"><img src="images/mpstat_icon2.png" alt="" /></div>
+                    <div class="info">
+                      <div class="title">總造訪人次</div>
+                      <div class="num num02">663,033</div>
+                      <!-- <ul>
+                        <li>新案<em class="amount01">27</em></li>
+                        <li>申覆案<em class="amount02">2</em></li>
+                      </ul> -->
+                    </div>
+                  </div>
+                  <!-- 3 -->
+                  <div class="item">
+                    <div class="staticon"><img src="images/mpstat_icon3.png" alt="" /></div>
+                    <div class="info">
+                      <div class="title">頁面總瀏覽人次</div>
+                      <div class="num num03">999,238</div>
+                      <!-- <ul>
+                        <li>新案<em class="amount03">412</em></li>
+                        <li>RTF退件<em class="amount04">30</em></li>
+                        <li>續審案<em class="amount05">382</em></li>
+                        <li>申覆案<em class="amount06">216</em></li>
+                      </ul> -->
+                    </div>
+                  </div>
+
+                  <!--  -->
+                </div>
+              </div>
+              <!-- end -->
+            </div>
+          </div>
+        </section>
+        <!--  統計 end-->
+      </div>
+
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+          <div class="footer_info">
+            <div class="footer_logo">
+              <img src="images/footer_logo.svg" alt="" class="img-responsive" />
+            </div>
+            <div class="infoblock">
+              <p class="Copyright">
+                版權所有© 財團法人醫藥品查驗中心<br />
+                地址：台北市南港區11557忠孝東路六段465號3樓<br />
+                本網站支援IE、Firefox及Chrome，最佳瀏覽解析度為1024x768以上<br />
+                <span class="update">更新日期:<em>112-10-30</em></span>
+                <span class="counter">累計瀏覽人次:<em>1234567890</em></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">TOP</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src="vendor/sticky-sidebar/sticky-sidebar.js"></script>
+    <script src="vendor/sticky-sidebar/ResizeSensor.js"></script>
+    <!-- fancy -->
+    <script src="vendor/fancybox/jquery.fancybox.min.js"></script>
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+  </body>
+</html>
