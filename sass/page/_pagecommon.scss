@@ -235,33 +235,61 @@
     margin: 0 4% 2em;
   }
 }
-.sub_epaper {
-  background: rgba(255, 255, 255, 1) url('../images/sub_epaperbg.jpg') no-repeat right top;
-  background-size: auto 100%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 20px 0px;
-  padding: 1em 3.5em;
-  border-radius: 0;
-  margin: 1em 2% 0;
-  min-height: 218px;
-  .h2title {
-    color: darken($primaryColor, 0%);
-    font-weight: bold;
-    font-size: 2em;
-    line-height: 120px !important;
-    margin: 40px 0 0;
-    position: relative;
-    letter-spacing: 2px;
-    padding-left: 130px;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    &:before {
-      content: '';
-      width: 120px;
-      height: 120px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: url('../images/h2titlebg.png') no-repeat center center;
-      background-size: 100% auto;
+.sub_epaperBlock {
+  .sub_epaper {
+    a {
+      background: rgba(255, 255, 255, 1) url('../images/sub_epaperbg.jpg') no-repeat right top;
+      background-size: auto 100%;
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 20px 0px;
+      padding: 1em 3.5em;
+      border-radius: 0;
+      margin: 1em 2% 0;
+      min-height: 218px;
+      display: block;
+      &:hover,
+      &:focus {
+        border: 2px solid $lightColor;
+      }
+      .h2title {
+        color: darken($primaryColor, 0%);
+        font-weight: bold;
+        font-size: 2em;
+        line-height: 120px !important;
+        margin: 40px 0 0;
+        position: relative;
+        letter-spacing: 2px;
+        padding-left: 130px;
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        &:before {
+          content: '';
+          width: 120px;
+          height: 120px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: url('../images/h2titlebg.png') no-repeat center center;
+          background-size: 100% auto;
+        }
+      }
+      @include screen('mobile') {
+        padding: 1em 2em;
+        margin: 0 4% 2em;
+        .h2title {
+          margin: 0;
+        }
+      }
+      @include screen('xs_mobile') {
+        .h2title {
+          margin: 10px 0 0;
+          font-size: 1.8em;
+          line-height: 80px !important;
+          padding-left: 80px;
+          &:before {
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
     }
   }
   .epaper_icon {
@@ -284,31 +312,12 @@
         }
       }
     }
-  }
-  @include screen('mobile') {
-    padding: 1em 2em;
-    margin: 0 4% 2em;
-    .h2title {
-      margin: 0;
-    }
-    .epaper_icon {
+    @include screen('mobile') {
       top: 100px;
       right: auto;
       justify-content: center;
     }
-  }
-  @include screen('xs_mobile') {
-    .h2title {
-      margin: 10px 0 0;
-      font-size: 1.8em;
-      line-height: 80px !important;
-      padding-left: 80px;
-      &:before {
-        width: 80px;
-        height: 80px;
-      }
-    }
-    .epaper_icon {
+    @include screen('xs_mobile') {
       top: 90px;
     }
   }

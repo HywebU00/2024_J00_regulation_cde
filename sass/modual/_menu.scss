@@ -115,8 +115,10 @@
       ul {
         display: none;
         overflow: visible;
-        width: 99%;
-        background: rgba(0, 0, 0, 0.8);
+        // width: 99%;
+        width: 200px;
+        // background: rgba(0, 0, 0, 0.8);
+        background: darken($primaryColor, 0);
         padding: 0;
         z-index: 999999;
         position: absolute;
@@ -126,6 +128,8 @@
         text-align: left;
         animation: showMenu 0.3s $cubic;
         font-size: 0.938rem;
+        border-radius: 3px;
+        box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.4);
         // 第二層選單樣式
         li {
           float: none;
@@ -133,9 +137,18 @@
             padding: 0.6em 1.2em;
             color: #fff;
             font-weight: bold;
+            border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
             &:hover,
             &:focus {
-              background: $aHover;
+              // background: $secondaryColor;
+              color: #fff !important;
+              background: rgb(247, 201, 129);
+              background: linear-gradient(180deg, rgb(253, 133, 46) 0%, rgb(243, 132, 56) 100%);
+            }
+          }
+          &:last-child {
+            a {
+              border: none;
             }
           }
         }
@@ -147,13 +160,13 @@
             padding-right: 2em;
             &:hover,
             &:focus {
-              background: $primaryColor;
+              // background: $primaryColor;
             }
             &:after {
               content: '';
               position: absolute;
               right: 10px;
-              top: 1.3em;
+              top: 1.2em;
               width: 6px;
               height: 6px;
               border: 2px solid #fff;

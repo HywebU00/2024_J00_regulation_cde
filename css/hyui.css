@@ -3959,8 +3959,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .menu ul li ul {
   display: none;
   overflow: visible;
-  width: 99%;
-  background: rgba(0, 0, 0, 0.8);
+  width: 200px;
+  background: #0d50aa;
   padding: 0;
   z-index: 999999;
   position: absolute;
@@ -3970,6 +3970,8 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   text-align: left;
   animation: showMenu 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   font-size: 0.938rem;
+  border-radius: 3px;
+  box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.4);
 }
 .menu ul li ul li {
   float: none;
@@ -3978,9 +3980,15 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   padding: 0.6em 1.2em;
   color: #fff;
   font-weight: bold;
+  border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 }
 .menu ul li ul li a:hover, .menu ul li ul li a:focus {
-  background: #f08436;
+  color: #fff !important;
+  background: rgb(247, 201, 129);
+  background: linear-gradient(180deg, rgb(253, 133, 46) 0%, rgb(243, 132, 56) 100%);
+}
+.menu ul li ul li:last-child a {
+  border: none;
 }
 .menu ul li ul li.hasChild > ul {
   z-index: 999;
@@ -3988,14 +3996,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
 .menu ul li ul li.hasChild > a {
   padding-right: 2em;
 }
-.menu ul li ul li.hasChild > a:hover, .menu ul li ul li.hasChild > a:focus {
-  background: #0d50aa;
-}
 .menu ul li ul li.hasChild > a:after {
   content: "";
   position: absolute;
   right: 10px;
-  top: 1.3em;
+  top: 1.2em;
   width: 6px;
   height: 6px;
   border: 2px solid #fff;
@@ -12441,7 +12446,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   }
 }
 
-.sub_epaper {
+.sub_epaperBlock .sub_epaper a {
   background: rgb(255, 255, 255) url("../images/sub_epaperbg.jpg") no-repeat right top;
   background-size: auto 100%;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 20px 0px;
@@ -12449,8 +12454,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border-radius: 0;
   margin: 1em 2% 0;
   min-height: 218px;
+  display: block;
 }
-.sub_epaper .h2title {
+.sub_epaperBlock .sub_epaper a:hover, .sub_epaperBlock .sub_epaper a:focus {
+  border: 2px solid #99bcdc;
+}
+.sub_epaperBlock .sub_epaper a .h2title {
   color: #0d50aa;
   font-weight: bold;
   font-size: 2em;
@@ -12461,7 +12470,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   padding-left: 130px;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
-.sub_epaper .h2title:before {
+.sub_epaperBlock .sub_epaper a .h2title:before {
   content: "";
   width: 120px;
   height: 120px;
@@ -12471,7 +12480,28 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   background: url("../images/h2titlebg.png") no-repeat center center;
   background-size: 100% auto;
 }
-.sub_epaper .epaper_icon {
+@media screen and (max-width: 767px) {
+  .sub_epaperBlock .sub_epaper a {
+    padding: 1em 2em;
+    margin: 0 4% 2em;
+  }
+  .sub_epaperBlock .sub_epaper a .h2title {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .sub_epaperBlock .sub_epaper a .h2title {
+    margin: 10px 0 0;
+    font-size: 1.8em;
+    line-height: 80px !important;
+    padding-left: 80px;
+  }
+  .sub_epaperBlock .sub_epaper a .h2title:before {
+    width: 80px;
+    height: 80px;
+  }
+}
+.sub_epaperBlock .epaper_icon {
   list-style: none;
   display: flex;
   justify-content: flex-end;
@@ -12480,41 +12510,24 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   right: 100px;
   z-index: 9;
 }
-.sub_epaper .epaper_icon li {
+.sub_epaperBlock .epaper_icon li {
   flex: 0 0 80px;
   font-size: 0;
 }
-.sub_epaper .epaper_icon li img:hover, .sub_epaper .epaper_icon li img:focus {
+.sub_epaperBlock .epaper_icon li img:hover, .sub_epaperBlock .epaper_icon li img:focus {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   box-shadow: 0 2px 0 5px rgba(255, 255, 255, 0.3);
 }
 @media screen and (max-width: 767px) {
-  .sub_epaper {
-    padding: 1em 2em;
-    margin: 0 4% 2em;
-  }
-  .sub_epaper .h2title {
-    margin: 0;
-  }
-  .sub_epaper .epaper_icon {
+  .sub_epaperBlock .epaper_icon {
     top: 100px;
     right: auto;
     justify-content: center;
   }
 }
 @media screen and (max-width: 575px) {
-  .sub_epaper .h2title {
-    margin: 10px 0 0;
-    font-size: 1.8em;
-    line-height: 80px !important;
-    padding-left: 80px;
-  }
-  .sub_epaper .h2title:before {
-    width: 80px;
-    height: 80px;
-  }
-  .sub_epaper .epaper_icon {
+  .sub_epaperBlock .epaper_icon {
     top: 90px;
   }
 }
