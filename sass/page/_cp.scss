@@ -349,6 +349,18 @@
     }
   }
 }
+.web_link2 {
+  margin: 1.5em 0 1em;
+  @extend %clearfix;
+  h3 {
+    padding: 0.4em 0.5em;
+    margin: 0.5em 0px 1em;
+    background: #eee;
+    border-left: solid 5px $secondaryColor;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
 // 點閱次數
 .publish_info {
   line-height: 1.5em;
