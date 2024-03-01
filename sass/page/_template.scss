@@ -112,16 +112,87 @@ h2.title {
       @include gutter(40px);
     }
   }
+  .nodemenu_btn {
+    display: none;
+    position: absolute;
+    left: 0em;
+    top: 116px;
+    z-index: 9;
+    width: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    @include screen('tablet') {
+      display: block;
+    }
+    @include screen('mobile') {
+      display: block;
+      top: 100px;
+    }
+    a {
+      color: #fff;
+      display: block;
+      background-color: $primaryColor;
+      padding: 2em 0.5em 1em;
+      border-radius: 0 8px 8px 0;
+      width: 2em;
+      position: relative;
+      &:before {
+        content: '';
+        border: 2px solid #fff;
+        border-right: none;
+        border-bottom: none;
+        transform: rotate(135deg);
+        position: absolute;
+        top: 0.8em;
+        left: 0.6em;
+        width: 8px;
+        height: 8px;
+      }
+      &.open {
+        border-radius: 0 8px 0 0;
+        &:before {
+          left: 0.8em;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
   .center_block {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
   }
+  // .left_block {
+  //   flex: none;
+  //   flex-basis: 240px;
+  //   max-width: 240px;
+  //   margin-right: 40px;
+  //   &.hidden {
+  //     + .center_block {
+  //       flex: none;
+  //       flex-basis: 100%;
+  //       max-width: 100%;
+  //     }
+  //   }
+  //   + .center_block {
+  //     flex: auto;
+  //     flex-basis: calc(100% - 280px);
+  //     max-width: calc(100% - 280px);
+  //   }
+  //   @include screen('tablet') {
+  //     display: none;
+  //     + .center_block {
+  //       flex: none;
+  //       flex-basis: 100%;
+  //       max-width: 100%;
+  //     }
+  //   }
+  // }
   .left_block {
     flex: none;
     flex-basis: 240px;
     max-width: 240px;
     margin-right: 40px;
+
     &.hidden {
       + .center_block {
         flex: none;
@@ -129,18 +200,33 @@ h2.title {
         max-width: 100%;
       }
     }
+
     + .center_block {
       flex: auto;
       flex-basis: calc(100% - 280px);
       max-width: calc(100% - 280px);
     }
+
     @include screen('tablet') {
-      display: none;
+      position: absolute;
+      left: -210px;
+      top: 116px;
+      bottom: 0;
+      width: 210px;
+      transition: 0.5s;
+      z-index: 10;
+      &.open {
+        left: 2em;
+      }
+
       + .center_block {
         flex: none;
         flex-basis: 100%;
         max-width: 100%;
       }
+    }
+    @include screen('mobile') {
+      top: 100px;
     }
   }
   &.small_size {

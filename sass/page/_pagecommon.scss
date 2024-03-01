@@ -49,6 +49,13 @@
       border-bottom: none;
     }
   }
+  .check_grp {
+    .form_inline {
+      label {
+      }
+    }
+  }
+
   .form_col-6-6 {
     padding: 0 0 1em;
     > .form_grp {
@@ -179,9 +186,11 @@
       list-style: none;
       margin: 0;
       padding: 0;
+      line-height: 1.5em;
       li {
         display: flex;
         padding: 0.3em 0;
+        margin-bottom: 0;
         span {
           flex: 1 1 auto;
           &.th_title {

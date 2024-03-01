@@ -6703,13 +6703,13 @@ select::-ms-expand {
 @media screen and (max-width: 1399px) {
   .flex-form .check_grp.form_inline label,
   .flex-form .radio_grp.form_inline label {
-    flex-basis: 23%;
+    flex-basis: 30%;
   }
 }
 @media screen and (max-width: 991px) {
   .flex-form .check_grp.form_inline label,
   .flex-form .radio_grp.form_inline label {
-    flex-basis: 31%;
+    flex-basis: 40%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -9483,6 +9483,54 @@ h2.title:before {
     box-sizing: border-box;
   }
 }
+.innerpage .nodemenu_btn {
+  display: none;
+  position: absolute;
+  left: 0em;
+  top: 116px;
+  z-index: 9;
+  width: 1.5em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+@media screen and (max-width: 991px) {
+  .innerpage .nodemenu_btn {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .innerpage .nodemenu_btn {
+    display: block;
+    top: 100px;
+  }
+}
+.innerpage .nodemenu_btn a {
+  color: #fff;
+  display: block;
+  background-color: #0d50aa;
+  padding: 2em 0.5em 1em;
+  border-radius: 0 8px 8px 0;
+  width: 2em;
+  position: relative;
+}
+.innerpage .nodemenu_btn a:before {
+  content: "";
+  border: 2px solid #fff;
+  border-right: none;
+  border-bottom: none;
+  transform: rotate(135deg);
+  position: absolute;
+  top: 0.8em;
+  left: 0.6em;
+  width: 8px;
+  height: 8px;
+}
+.innerpage .nodemenu_btn a.open {
+  border-radius: 0 8px 0 0;
+}
+.innerpage .nodemenu_btn a.open:before {
+  left: 0.8em;
+  transform: rotate(-45deg);
+}
 .innerpage .center_block {
   flex: none;
   flex-basis: 100%;
@@ -9506,12 +9554,26 @@ h2.title:before {
 }
 @media screen and (max-width: 991px) {
   .innerpage .left_block {
-    display: none;
+    position: absolute;
+    left: -210px;
+    top: 116px;
+    bottom: 0;
+    width: 210px;
+    transition: 0.5s;
+    z-index: 10;
+  }
+  .innerpage .left_block.open {
+    left: 2em;
   }
   .innerpage .left_block + .center_block {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .innerpage .left_block {
+    top: 100px;
   }
 }
 .innerpage.small_size {
@@ -12397,10 +12459,12 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   list-style: none;
   margin: 0;
   padding: 0;
+  line-height: 1.5em;
 }
 .pictext_list_block .doc_release ul li {
   display: flex;
   padding: 0.3em 0;
+  margin-bottom: 0;
 }
 .pictext_list_block .doc_release ul li span {
   flex: 1 1 auto;

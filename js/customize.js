@@ -262,21 +262,37 @@ $(function () {
     }
   });
 
-  //內頁左欄
+  //內頁左欄上下開合
   var _leftnodemenu = $('.left_block .leftblock_nodemenu ul');
   _leftnodemenu.find('li').has('ul').addClass('hasChild');
+  var _hasul = _leftnodemenu.find('.hasChild').children('a');
+  $('<button type="button" class="arrow">箭頭</button>').insertAfter(_hasul);
   _leftnodemenu
     .children('li')
-    .children('a')
+    .children('button')
     .click(function () {
       $(this).next('ul').stop().slideToggle();
-      $(this).parent('li').stop().toggleClass('open');
+      $(this).stop().toggleClass('open');
+      $(this).parent('li').siblings('li').children('ul').stop().slideUp();
+      $(this).parent('li').siblings('.hasChild').children('button').removeClass('open');
     });
+
   //  內頁左欄 左右收合
   $('.nodemenu_btn>a').click(function () {
     $('.left_block').stop().toggleClass('open');
     $(this).stop().toggleClass('open');
   });
+  // 點擊其他地方，左欄收起
+  $(document)
+    .off('touchend click')
+    .on('touchend click', function (e) {
+      var container = $('.nodemenu_btn a, .left_block '); //點這些以外的區塊
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $('.left_block').removeClass('open'); //要被收起來的區塊
+        $('.left_block .leftblock_nodemenu ul ul').stop().slideUp();
+        $('.left_block .leftblock_nodemenu ul li.hasChild button').removeClass('open');
+      }
+    });
 });
 
 ////////////////////////////////////////////////////////
