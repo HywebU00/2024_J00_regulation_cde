@@ -12343,7 +12343,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   margin-bottom: 2em;
 }
 .pictext_list_block .pictext_list {
-  display: flex;
   padding: 1em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px;
   background-color: #fff;
@@ -12354,6 +12353,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .pictext_list_block .pictext_list a {
   color: #1a1a1a;
+  display: block;
 }
 .pictext_list_block .pictext_list:hover, .pictext_list_block .pictext_list:focus {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -12470,7 +12470,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   flex: 1 1 auto;
 }
 .pictext_list_block .doc_release ul li span.th_title {
-  flex: 0 0 5em;
+  flex: 0 0 8em;
   font-weight: bold;
   text-align: right;
 }
