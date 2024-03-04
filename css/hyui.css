@@ -12454,6 +12454,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .pictext_list_block .doc_release {
   position: relative;
+  display: flex;
 }
 .pictext_list_block .doc_release ul {
   list-style: none;
