@@ -9417,6 +9417,12 @@ body.noscroll {
 .main h2 {
   line-height: 1.375em;
 }
+.main.small_size {
+  font-size: 0.938em;
+}
+.main.large_size {
+  font-size: 1.125em;
+}
 
 h2.title {
   font-size: 1.875em;
@@ -12728,7 +12734,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   }
   .main table,
   .content table {
-    background: #FFF;
+    background: #fff;
   }
   .main li,
   .content li {
@@ -12776,7 +12782,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     width: 30%;
     height: 4cm;
     display: inline-block;
-    background: #DEDEDE;
+    background: #dedede;
     position: relative;
   }
   .lightbox_slider .cp_slider .slick-slide:before {
@@ -12797,5 +12803,9 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     max-height: 4cm;
     display: inline-block;
     vertical-align: middle;
+  }
+  .table_list table th {
+    white-space: normal;
+    font-size: 0.875em;
   }
 }/*# sourceMappingURL=hyui.css.map */

@@ -49,6 +49,13 @@ body {
   h2 {
     line-height: 1.375em;
   }
+  &.small_size {
+    font-size: 0.938em;
+  }
+
+  &.large_size {
+    font-size: 1.125em;
+  }
 }
 h2.title {
   font-size: 1.875em;
