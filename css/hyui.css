@@ -12804,8 +12804,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
     display: inline-block;
     vertical-align: middle;
   }
+  .table_list table {
+    font-size: 0.875em;
+  }
   .table_list table th {
     white-space: normal;
-    font-size: 0.875em;
+  }
+  .table_list .ingredients {
+    width: auto;
   }
 }/*# sourceMappingURL=hyui.css.map */
