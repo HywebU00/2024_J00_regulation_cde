@@ -74,4 +74,13 @@
       clear: both;
     }
   }
+  dl {
+    margin: 1em 0;
+    dt {
+      float: left;
+    }
+    dd {
+      margin: 0 0 1em 3em;
+    }
+  }
 }

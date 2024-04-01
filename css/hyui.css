@@ -1321,6 +1321,15 @@ th {
     clear: both;
   }
 }
+.cp dl {
+  margin: 1em 0;
+}
+.cp dl dt {
+  float: left;
+}
+.cp dl dd {
+  margin: 0 0 1em 3em;
+}
 
 :focus:not(:focus-visible) {
   outline: none;
