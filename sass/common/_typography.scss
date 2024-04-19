@@ -84,3 +84,18 @@
     }
   }
 }
+
+.fp {
+  font-size: 1em;
+  line-height: 1.65em;
+  margin: 1em 0;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+  clear: both;
+  @include screen('xs_mobile') {
+    font-size: 1em * 1.2;
+  }
+}

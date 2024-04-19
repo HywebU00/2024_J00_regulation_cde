@@ -113,7 +113,7 @@
   }
   .iframe_v {
     overflow: hidden;
-    padding-top: (9 / 16) * 100%;
+    padding-top: calc(9 / 16) * 100%;
     position: relative;
     margin: 1em 0;
     iframe {

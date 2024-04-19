@@ -1331,6 +1331,23 @@ th {
   margin: 0 0 1em 3em;
 }
 
+.fp {
+  font-size: 1em;
+  line-height: 1.65em;
+  margin: 1em 0;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+  clear: both;
+}
+@media screen and (max-width: 575px) {
+  .fp {
+    font-size: 1.2em;
+  }
+}
+
 :focus:not(:focus-visible) {
   outline: none;
 }
@@ -12469,7 +12486,6 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .pictext_list_block .doc_release {
   position: relative;
-  display: flex;
 }
 .pictext_list_block .doc_release ul {
   list-style: none;
