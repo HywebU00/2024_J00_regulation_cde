@@ -10526,7 +10526,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border-radius: 2em;
 }
 .c_indexMore a::after {
-  content: "+";
+  content: "";
   position: absolute;
   width: 20px;
   height: 20px;
@@ -10535,9 +10535,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   top: 50%;
   transform: translateY(-50%) rotate(0deg);
   transition: 0.3s all ease;
-  background: #333;
+  background: #333 url(../images/icon/icon_add2.svg) no-repeat center center;
+  background-size: 10px auto;
   color: #fff;
-  line-height: 1em;
+  line-height: 1.4em;
   border-radius: 50%;
   font-weight: bold;
 }
