@@ -183,6 +183,12 @@ div.function {
             background-size: 100%;
           }
         }
+        &.intquery {
+          a:before {
+            background: url(../images/basic/icon_search.png) no-repeat center center;
+            background-size: 100%;
+          }
+        }
       }
     }
   }

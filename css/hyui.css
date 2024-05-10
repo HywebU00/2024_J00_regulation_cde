@@ -3747,7 +3747,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   width: 350px;
   display: none;
 }
-.mp_searchblock .search {
+.mp_searchblock .search2 {
   display: flex;
   flex-wrap: wrap;
   vertical-align: top;
@@ -3755,7 +3755,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin: 1em 0.5em;
   box-sizing: border-box;
 }
-.mp_searchblock .search label {
+.mp_searchblock .search2 label {
   font-size: 1.4em;
   font-weight: bold;
   color: #093a7b;
@@ -3765,19 +3765,19 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   padding-top: 0.2rem;
   white-space: nowrap;
 }
-.mp_searchblock .search .form_grp {
+.mp_searchblock .search2 .form_grp {
   flex: 1 0 auto;
   flex-basis: calc(100% - 150px);
   margin: 0;
   display: flex;
 }
 @media screen and (max-width: 767px) {
-  .mp_searchblock .search .form_grp {
+  .mp_searchblock .search2 .form_grp {
     flex-wrap: wrap;
     flex-basis: 100%;
   }
 }
-.mp_searchblock .search .form_grp input {
+.mp_searchblock .search2 .form_grp input {
   margin: 0;
   padding: 0.25em 0.5em;
   box-shadow: none;
@@ -3785,7 +3785,7 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   flex: 1 1 auto;
   position: relative;
 }
-.mp_searchblock .search .form_grp input.txtinput {
+.mp_searchblock .search2 .form_grp input.txtinput {
   background: #fff url("../images/mp_search_icon.png") no-repeat right 1em top 0.85em;
   background-size: 18px auto;
   padding: 0.25em 3em 0.25em 0.5em;
@@ -3794,11 +3794,11 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   margin-right: 0.5em;
 }
 @media screen and (max-width: 767px) {
-  .mp_searchblock .search .form_grp input.txtinput {
+  .mp_searchblock .search2 .form_grp input.txtinput {
     line-height: 2rem;
   }
 }
-.mp_searchblock .search .form_grp input[type=submit] {
+.mp_searchblock .search2 .form_grp input[type=submit] {
   flex: 0 0 auto;
   flex-basis: 115px;
   width: 115px;
@@ -3806,55 +3806,55 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   line-height: 2.2rem;
 }
 @media screen and (max-width: 767px) {
-  .mp_searchblock .search .form_grp input[type=submit] {
+  .mp_searchblock .search2 .form_grp input[type=submit] {
     flex: 1 1 auto;
     flex-basis: 45%;
     width: 45%;
     margin: 0.6em 0.5em 0.5em 0;
   }
 }
-.mp_searchblock .search .form_grp input:focus {
+.mp_searchblock .search2 .form_grp input:focus {
   box-shadow: 0 0px 0px 2px #ff3e4d;
 }
-.mp_searchblock .search .form_grp button,
-.mp_searchblock .search .form_grp .btn,
-.mp_searchblock .search .form_grp .btn-search {
+.mp_searchblock .search2 .form_grp button,
+.mp_searchblock .search2 .form_grp .btn,
+.mp_searchblock .search2 .form_grp .btn-search {
   min-width: auto;
   padding: 0.25em 0.8em;
   margin: 0;
 }
-.mp_searchblock .search .form_grp button:hover, .mp_searchblock .search .form_grp button:focus,
-.mp_searchblock .search .form_grp .btn:hover,
-.mp_searchblock .search .form_grp .btn:focus,
-.mp_searchblock .search .form_grp .btn-search:hover,
-.mp_searchblock .search .form_grp .btn-search:focus {
+.mp_searchblock .search2 .form_grp button:hover, .mp_searchblock .search2 .form_grp button:focus,
+.mp_searchblock .search2 .form_grp .btn:hover,
+.mp_searchblock .search2 .form_grp .btn:focus,
+.mp_searchblock .search2 .form_grp .btn-search:hover,
+.mp_searchblock .search2 .form_grp .btn-search:focus {
   box-shadow: none !important;
 }
-.mp_searchblock .search .btn_grp {
+.mp_searchblock .search2 .btn_grp {
   flex: 0 0 auto;
   flex-basis: 80px;
   padding: 0 0 0;
   margin: 0;
 }
-.mp_searchblock .search .btn_grp button,
-.mp_searchblock .search .btn_grp .btn,
-.mp_searchblock .search .btn_grp .btn-search {
+.mp_searchblock .search2 .btn_grp button,
+.mp_searchblock .search2 .btn_grp .btn,
+.mp_searchblock .search2 .btn_grp .btn-search {
   min-width: 115px;
   padding: 0.25em 0.5em;
   margin: 0;
   line-height: 2.2rem;
 }
-.mp_searchblock .search .btn_grp button:hover, .mp_searchblock .search .btn_grp button:focus,
-.mp_searchblock .search .btn_grp .btn:hover,
-.mp_searchblock .search .btn_grp .btn:focus,
-.mp_searchblock .search .btn_grp .btn-search:hover,
-.mp_searchblock .search .btn_grp .btn-search:focus {
+.mp_searchblock .search2 .btn_grp button:hover, .mp_searchblock .search2 .btn_grp button:focus,
+.mp_searchblock .search2 .btn_grp .btn:hover,
+.mp_searchblock .search2 .btn_grp .btn:focus,
+.mp_searchblock .search2 .btn_grp .btn-search:hover,
+.mp_searchblock .search2 .btn_grp .btn-search:focus {
   box-shadow: none !important;
 }
-.mp_searchblock .search .keywordHot {
+.mp_searchblock .search2 .keywordHot {
   flex: 1 1 100%;
 }
-.mp_searchblock .search .keywordHot ul {
+.mp_searchblock .search2 .keywordHot ul {
   line-height: 1.65em;
   margin: 0;
   padding: 0;
@@ -3862,16 +3862,16 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   justify-content: flex-end;
   list-style-type: none;
 }
-.mp_searchblock .search .keywordHot ul li {
+.mp_searchblock .search2 .keywordHot ul li {
   margin: 0;
   padding: 0.5em;
   flex: 0 0 auto;
 }
-.mp_searchblock .search .keywordHot ul a {
+.mp_searchblock .search2 .keywordHot ul a {
   color: #1a1a1a;
   text-decoration: none;
 }
-.mp_searchblock .search .keywordHot ul a:hover, .mp_searchblock .search .keywordHot ul a:focus {
+.mp_searchblock .search2 .keywordHot ul a:hover, .mp_searchblock .search2 .keywordHot ul a:focus {
   color: #f08436;
   cursor: pointer;
   text-decoration: underline;
@@ -8968,6 +8968,10 @@ div.function ul li.icon_forward a:before {
 }
 .function_panel .function ul li.forward a:before {
   background: url(../images/basic/icon_forward-style2.svg) no-repeat center center;
+  background-size: 100%;
+}
+.function_panel .function ul li.intquery a:before {
+  background: url(../images/basic/icon_search.png) no-repeat center center;
   background-size: 100%;
 }
 

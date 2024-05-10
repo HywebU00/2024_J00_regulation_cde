@@ -806,3 +806,12 @@ $(function () {
     ],
   });
 });
+
+//pageSearch
+(function () {
+  const pageSearchBtn = document.querySelector('.pageSearchBtn');
+  const pageSearchBox = document.querySelector('#pageSearchBox');
+  pageSearchBtn?.addEventListener('click', () => {
+    window.getComputedStyle(pageSearchBox).display === 'none' ? (pageSearchBox.style.display = 'block') : (pageSearchBox.style.display = 'none');
+  });
+})();
