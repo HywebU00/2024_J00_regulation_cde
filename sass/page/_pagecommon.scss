@@ -79,11 +79,31 @@
     margin: 2em 0 1em;
   }
 }
-.pageSearchBtn {
-  // position: absolute;
-  // top: 4em;
-  // left: 2.5em;
-  // margin-top: -50px;
+#pageSearchBtn {
+  position: absolute;
+  left: 2.5em;
+}
+.lp {
+  h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    position: relative;
+    border-bottom: solid 1px #ddd;
+    padding: 0.5em 0 0.5em 0.3em;
+  }
+  .gotopsearch {
+    float: right;
+    margin-top: -0.7em;
+    button {
+      font-size: 1rem;
+      display: block;
+      &.btn {
+        padding: 0.5em 1em 0.5em 0.5em;
+        font-weight: normal;
+        border-radius: 3px;
+      }
+    }
+  }
 }
 // 圖文列表
 .pictext_list_block {

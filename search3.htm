@@ -120,7 +120,8 @@
           </div>
           <!-- 主要內容區 -->
           <div class="center_block">
-            <h2 class="title">綜合查詢</h2>
+            <h2 class="title" id="searchtitle">綜合查詢</h2>
+            <button class="btn btn-primary" id="pageSearchBtn"><i class="i_search invert"></i>顯示條件查詢</button>
             <!-- function_panel -->
             <div class="function_panel">
               <!-- function功能區塊 start-->
@@ -170,7 +171,13 @@
                 </form>
               </div>
               <!-- 條件查詢 end -->
-
+              <!-- 查詢結果 -->
+              <h3 id="sdtail">
+                查詢結果
+                <div class="gotopsearch">
+                  <button onclick="location.href='#searchtitle'" class="btn btn-primary"><i class="i_arrow_up invert"></i>返回綜合查詢</button>
+                </div>
+              </h3>
               <!-- Pagination -->
               <div class="pagination">
                 <form action="">
@@ -205,7 +212,7 @@
                 </ul>
               </div>
               <!-- Pagination end-->
-              <!-- 查詢結果 -->
+              <!-- 查詢結果列表 -->
               <div class="table_list">
                 <table class="table_sprite">
                   <!-- <caption>
@@ -390,7 +397,7 @@
                   </tbody>
                 </table>
               </div>
-              <!-- 查詢結果 end-->
+              <!-- 查詢結果列表 end-->
               <!-- Pagination -->
               <div class="pagination">
                 <form action="">
@@ -425,6 +432,9 @@
                 </ul>
               </div>
               <!-- Pagination end-->
+              <div class="gotopsearch">
+                <button onclick="location.href='#searchtitle'" class="btn btn-primary"><i class="i_arrow_up invert"></i>返回綜合查詢</button>
+              </div>
             </section>
             <!-- LP End -->
           </div>

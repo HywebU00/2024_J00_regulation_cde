@@ -2928,6 +2928,10 @@ img.loaded {
   background-size: contain;
 }
 
+.invert {
+  filter: invert(1);
+}
+
 [tooltip] {
   position: relative;
 }
@@ -12374,6 +12378,32 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   font-size: 1.125em;
   font-weight: bold;
   margin: 2em 0 1em;
+}
+
+#pageSearchBtn {
+  position: absolute;
+  left: 2.5em;
+}
+
+.lp h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  position: relative;
+  border-bottom: solid 1px #ddd;
+  padding: 0.5em 0 0.5em 0.3em;
+}
+.lp .gotopsearch {
+  float: right;
+  margin-top: -0.7em;
+}
+.lp .gotopsearch button {
+  font-size: 1rem;
+  display: block;
+}
+.lp .gotopsearch button.btn {
+  padding: 0.5em 1em 0.5em 0.5em;
+  font-weight: normal;
+  border-radius: 3px;
 }
 
 .pictext_list_block {

@@ -120,7 +120,8 @@
           </div>
           <!-- 主要內容區 -->
           <div class="center_block">
-            <h2 class="title">綜合查詢</h2>
+            <h2 class="title" id="searchtitle">綜合查詢</h2>
+            <button class="btn btn-primary" id="pageSearchBtn"><i class="i_search invert"></i>顯示條件查詢</button>
             <!-- function_panel -->
             <div class="function_panel">
               <!-- function功能區塊 start-->
@@ -128,7 +129,6 @@
                 <ul>
                   <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
                   <li class="print"><a href="#">友善列印</a></li>
-                  <li class="intquery"><a href="#" class="pageSearchBtn">綜合查詢</a></li>
                 </ul>
               </div>
               <!-- function功能區塊 end-->
@@ -155,7 +155,6 @@
                           <input name="" type="date" value="" class="calendar" placeholder="請輸入開始日期" />
                         </div>
                         <div class="datepick">
-                          至
                           <input name="" type="date" value="" class="calendar" placeholder="請輸入結束日期" />
                         </div>
                       </div>
@@ -217,14 +216,20 @@
                     </div>
 
                     <div class="btn_grp form_inline">
-                      <button class="btn btn-submit">查詢</button>
+                      <button class="btn btn-submit" onclick="location.href='#sdtail'">查詢</button>
                       <button class="btn btn-reset">重填</button>
                     </div>
                   </div>
                 </form>
               </div>
               <!-- 條件查詢 end -->
-
+              <!-- 查詢結果 -->
+              <h3 id="sdtail">
+                查詢結果
+                <div class="gotopsearch">
+                  <button onclick="location.href='#searchtitle'" class="btn btn-primary"><i class="i_arrow_up invert"></i>返回綜合查詢</button>
+                </div>
+              </h3>
               <!-- Pagination -->
               <div class="pagination">
                 <form action="">
@@ -259,7 +264,7 @@
                 </ul>
               </div>
               <!-- Pagination end-->
-              <!-- 查詢結果 -->
+              <!-- 查詢結果列表 -->
               <div class="table_list">
                 <table class="table_sprite">
                   <!-- <caption>
@@ -267,184 +272,97 @@
                 </caption> -->
                   <thead>
                     <tr>
-                      <th>成份</th>
-                      <th>分類</th>
-                      <th>含量(一次)</th>
-                      <th>含量(一日)</th>
-                      <th>單/複方</th>
-                      <th>劑型</th>
-                      <th>投與途徑</th>
-                      <th>類別</th>
-                      <th>牽涉之公告</th>
-                      <th>備註</th>
+                      <th>日期</th>
+                      <th>文號</th>
+                      <th>次分類</th>
+                      <th>訊息摘要/主旨</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="ingredients">Detran MMG 40,000...........100gm E.D.T.A.(Ethylendiaminetetraacetic acid) Disodium Salt.......0.025gm d-Mannitol ............................100gm Sodium Acetate ...................2.72gm Sodium Chloride .................2.63gm</td>
-                      <td>再評估</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>Injection</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
                       <td>
-                        <ul>
-                          <li><a href="#">72.11.17衛署藥字第451401號</a></li>
-                          <li><a href="#">公告心臟血管藥品評估通過72.11.17第451401號</a></li>
-                        </ul>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
                       </td>
-                      <td>利尿﹑腦水腫﹑降顱內壓﹑降眼壓。</td>
                     </tr>
                     <tr>
-                      <td class="ingredients">公告作用於RAAS（renin-angiotensin-aldosterone system）之藥品安全性再評估結果相關事宜。包括：angiotensin-converting enzyme inhibitors（ACEIs）-benazepril、captopril、cilazapril、enalapril、fosinopril、imidapril、lisinopril、perindopril</td>
-                      <td>加刊注意事項警語</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">-</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">-</td>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
                       <td>
-                        <ul>
-                          <li><a href="#">63.06.15衛署藥字第43869號</a></li>
-                          <li><a href="#">63.06.15第43869號</a></li>
-                        </ul>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
                       </td>
-                      <td>&nbsp;</td>
                     </tr>
                     <tr>
-                      <td class="ingredients">
-                        公告作用於RAAS（renin-angiotensin-aldosterone system）之藥品安全性再評估結果相關事宜。包括：quinapril、ramipril；angiotensin II receptor blockers（ARBs）- azilsartan、candesartan、irbesartan、losartan、olmesartan、telmisartan、valsartan；direct renin inhibitors - aliskiren。
-                      </td>
-                      <td>加刊注意事項警語</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>中文仿單變更</td>
-                    </tr>
-                    <tr>
-                      <td class="ingredients">(十二) 增列鄰-氯苯基環戊基酮(o-Chlorphenyl cyclopentyl ketone、2-Chlorophenylcyclopentylketone、o-Chlorobenzoylcyclopentane)為第四級管制藥品原料藥。 (十三) 增列2-苯基乙醯基乙腈(alpha-Acetylphenylacetonitrile、APAAN)為第四級管制藥品原料藥。</td>
-                      <td>管制藥品</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
                       <td>
-                        <ul>
-                          <li><a href="#">院臺衛字第1080038834號</a></li>
-                          <li><a href="#">108.12.05院臺衛字第1080038834號</a></li>
-                        </ul>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
                       </td>
-                      <td>中文仿單變更</td>
                     </tr>
                     <tr>
-                      <td class="ingredients">Detran MMG 40,000...........100gm E.D.T.A.(Ethylendiaminetetraacetic acid) Disodium Salt.......0.025gm d-Mannitol ............................100gm Sodium Acetate ...................2.72gm Sodium Chloride .................2.63gm</td>
-                      <td>再評估</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>Injection</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
                       <td>
-                        <ul>
-                          <li><a href="#">72.11.17衛署藥字第451401號</a></li>
-                          <li><a href="#">公告心臟血管藥品評估通過72.11.17第451401號</a></li>
-                        </ul>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
                       </td>
-                      <td>利尿﹑腦水腫﹑降顱內壓﹑降眼壓。</td>
                     </tr>
                     <tr>
-                      <td class="ingredients">公告作用於RAAS（renin-angiotensin-aldosterone system）之藥品安全性再評估結果相關事宜。包括：angiotensin-converting enzyme inhibitors（ACEIs）-benazepril、captopril、cilazapril、enalapril、fosinopril、imidapril、lisinopril、perindopril</td>
-                      <td>加刊注意事項警語</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">-</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">-</td>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
                       <td>
-                        <ul>
-                          <li><a href="#">63.06.15衛署藥字第43869號</a></li>
-                          <li><a href="#">63.06.15第43869號</a></li>
-                        </ul>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
                       </td>
-                      <td>&nbsp;</td>
                     </tr>
                     <tr>
-                      <td class="ingredients">
-                        公告作用於RAAS（renin-angiotensin-aldosterone system）之藥品安全性再評估結果相關事宜。包括：quinapril、ramipril；angiotensin II receptor blockers（ARBs）- azilsartan、candesartan、irbesartan、losartan、olmesartan、telmisartan、valsartan；direct renin inhibitors - aliskiren。
-                      </td>
-                      <td>加刊注意事項警語</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>中文仿單變更</td>
-                    </tr>
-                    <tr>
-                      <td class="ingredients">(十二) 增列鄰-氯苯基環戊基酮(o-Chlorphenyl cyclopentyl ketone、2-Chlorophenylcyclopentylketone、o-Chlorobenzoylcyclopentane)為第四級管制藥品原料藥。 (十三) 增列2-苯基乙醯基乙腈(alpha-Acetylphenylacetonitrile、APAAN)為第四級管制藥品原料藥。</td>
-                      <td>管制藥品</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
                       <td>
-                        <ul>
-                          <li><a href="#">院臺衛字第1080038834號</a></li>
-                          <li><a href="#">108.12.05院臺衛字第1080038834號</a></li>
-                        </ul>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
                       </td>
-                      <td>中文仿單變更</td>
                     </tr>
                     <tr>
-                      <td class="ingredients">
-                        公告作用於RAAS（renin-angiotensin-aldosterone system）之藥品安全性再評估結果相關事宜。包括：quinapril、ramipril；angiotensin II receptor blockers（ARBs）- azilsartan、candesartan、irbesartan、losartan、olmesartan、telmisartan、valsartan；direct renin inhibitors - aliskiren。
-                      </td>
-                      <td>加刊注意事項警語</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>中文仿單變更</td>
-                    </tr>
-                    <tr>
-                      <td class="ingredients">(十二) 增列鄰-氯苯基環戊基酮(o-Chlorphenyl cyclopentyl ketone、2-Chlorophenylcyclopentylketone、o-Chlorobenzoylcyclopentane)為第四級管制藥品原料藥。 (十三) 增列2-苯基乙醯基乙腈(alpha-Acetylphenylacetonitrile、APAAN)為第四級管制藥品原料藥。</td>
-                      <td>管制藥品</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td class="aCenter">&nbsp;</td>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
                       <td>
-                        <ul>
-                          <li><a href="#">院臺衛字第1080038834號</a></li>
-                          <li><a href="#">108.12.05院臺衛字第1080038834號</a></li>
-                        </ul>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
                       </td>
-                      <td>中文仿單變更</td>
+                    </tr>
+                    <tr>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
+                      <td>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
+                      <td>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="date">2023-09-14</td>
+                      <td><a href="#">FDA藥字第1041411951號</a></td>
+                      <td>藥品臨床試驗</td>
+                      <td>
+                        公告「生物相似性單株抗體藥品查驗登記基準」<span class="detailBtn"><a href="#">詳全文</a></span>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <!-- 查詢結果 end-->
+              <!-- 查詢結果列表 end-->
               <!-- Pagination -->
               <div class="pagination">
                 <form action="">
@@ -479,6 +397,9 @@
                 </ul>
               </div>
               <!-- Pagination end-->
+              <div class="gotopsearch">
+                <button onclick="location.href='#searchtitle'" class="btn btn-primary"><i class="i_arrow_up invert"></i>返回綜合查詢</button>
+              </div>
             </section>
             <!-- LP End -->
           </div>
