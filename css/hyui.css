@@ -12675,6 +12675,23 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   }
 }
 
+.icon_sort {
+  vertical-align: middle;
+}
+.icon_sort a {
+  display: inline-block;
+  padding: 0 5px;
+}
+.icon_sort a img {
+  width: 10px;
+  width: 10px;
+}
+
+.keyword {
+  background: #fff000;
+  display: inline-block;
+}
+
 @media print {
   .main,
   .content, body {
