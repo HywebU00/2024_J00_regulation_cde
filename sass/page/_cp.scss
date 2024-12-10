@@ -159,6 +159,7 @@
     position: relative;
     padding: 0.5em 0 0.5em 1.5em;
     border-bottom: solid 1px #eee;
+    align-items: center;
     &:before {
       content: '·';
       font-size: 2em;
@@ -166,7 +167,7 @@
       width: 1em;
       height: 1em;
       position: absolute;
-      top: 0.4em;
+      top: 0.3em;
       left: 0.1em;
       color: #666;
     }
@@ -181,128 +182,159 @@
         line-height: 1.5em;
         vertical-align: middle;
         color: #666;
-        a {
-          color: #fff;
-          display: inline-block;
-          margin-right: 8px;
-        }
+        color: #fff;
+        display: inline-block;
+        margin-right: 8px;
+        // a {
+        //   color: #fff;
+        //   display: inline-block;
+        //   margin-right: 8px;
+        // }
       }
     }
     $fileType: doc, docx, odt, xls, xlsx, csv, ods, ppt, pptx, odp, zip, txt, mov, mp3, jpg, wmv, mp4, pdf, other;
     @each $fileType in $fileType {
       span.file_#{$fileType} {
-        a {
-          color: #fff;
-          font-weight: bold;
-          padding: 0.2em 0.8em;
-          border-radius: 3px;
-          &:hover,
-          &:focus {
-            color: #fff;
-          }
-        }
+        color: #fff;
+        font-weight: bold;
+        padding: 0.3em 0.5em;
+        border-radius: 3px;
+        line-height: 1em;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0.2em;
+        font-size: 0.875em;
+        // a {
+        //   color: #fff;
+        //   font-weight: bold;
+        //   padding: 0.2em 0.8em;
+        //   border-radius: 3px;
+        //   &:hover,
+        //   &:focus {
+        //     color: #fff;
+        //   }
+        // }
       }
     }
     span {
       &.file_doc,
       &.file_docx,
       &.file_odt {
-        a {
-          background: #275cb7;
-          &:hover,
-          &:focus {
-            background: darken(#275cb7, 5%);
-          }
-        }
+        background: #275cb7;
+        // a {
+        //   background: #275cb7;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#275cb7, 5%);
+        //   }
+        // }
       }
       &.file_xls,
       &.file_xlsx,
       &.file_csv,
       &.file_ods {
-        a {
-          background: #387947;
-          &:hover,
-          &:focus {
-            background: darken(#387947, 5%);
-          }
-        }
+        background: #387947;
+        // a {
+        //   background: #387947;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#387947, 5%);
+        //   }
+        // }
       }
       &.file_ppt,
       &.file_pptx,
       &.file_odp,
       &.file_pdf {
-        a {
-          background: #c55a3b;
-          &:hover,
-          &:focus {
-            background: darken(#c55a3b, 5%);
-          }
-        }
+        background: #c55a3b;
+        // a {
+        //   background: #c55a3b;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#c55a3b, 5%);
+        //   }
+        // }
       }
       &.file_pdf {
-        a {
-          background: #c00;
-          &:hover,
-          &:focus {
-            background: darken(#c00, 5%);
-          }
-        }
+        background: #c00;
+        // a {
+        //   background: #c00;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#c00, 5%);
+        //   }
+        // }
       }
       &.file_zip {
-        a {
-          background: #eb712e;
-          &:hover,
-          &:focus {
-            background: darken(#eb712e, 5%);
-          }
-        }
+        background: #eb712e;
+        // a {
+        //   background: #eb712e;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#eb712e, 5%);
+        //   }
+        // }
       }
       &.file_txt,
       &.file_other {
-        a {
-          background: #555;
-          &:hover,
-          &:focus {
-            background: darken(#555, 5%);
-          }
-        }
+        background: #555;
+        // a {
+        //   background: #555;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#555, 5%);
+        //   }
+        // }
       }
       &.file_mov {
-        a {
-          background: #009999;
-          &:hover,
-          &:focus {
-            background: darken(#009999, 5%);
-          }
-        }
+        background: #009999;
+        // a {
+        //   background: #009999;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#009999, 5%);
+        //   }
+        // }
       }
       &.file_mp3,
       &.file_mp4 {
-        a {
-          background: #088ecc;
-          &:hover,
-          &:focus {
-            background: darken(#088ecc, 5%);
-          }
-        }
+        background: #088ecc;
+        // a {
+        //   background: #088ecc;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#088ecc, 5%);
+        //   }
+        // }
       }
       &.file_jpg {
-        a {
-          background: #6c29a4;
-          &:hover,
-          &:focus {
-            background: darken(#6c29a4, 5%);
-          }
-        }
+        background: #6c29a4;
+        // a {
+        //   background: #6c29a4;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#6c29a4, 5%);
+        //   }
+        // }
       }
       &.file_wmv {
-        a {
-          background: #430a1f;
-          &:hover,
-          &:focus {
-            background: darken(#430a1f, 5%);
-          }
-        }
+        background: #430a1f;
+        // a {
+        //   background: #430a1f;
+        //   &:hover,
+        //   &:focus {
+        //     background: darken(#430a1f, 5%);
+        //   }
+        // }
+      }
+      &.kbtxt {
+        font-size: 0.875em;
+        color: #333;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 1em 0 0;
+        line-height: 2em;
       }
     }
   }
