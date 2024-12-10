@@ -147,6 +147,16 @@
       &:last-child {
         border: none;
       }
+      &.active {
+        a {
+          color: $primaryColor;
+          font-weight: bold;
+          &:hover,
+          &:focus {
+            color: darken($primaryColor, 10);
+          }
+        }
+      }
       a {
         display: block;
         padding: 0.5em 1em 0.5em 1.2em;
@@ -155,6 +165,10 @@
         font-size: 1.063em;
         &:hover {
           color: $aHover;
+        }
+        &:focus {
+          color: darken($primaryColor, 10);
+          font-weight: bold;
         }
       }
       ul {

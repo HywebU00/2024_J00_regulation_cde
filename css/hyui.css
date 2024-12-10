@@ -3590,6 +3590,14 @@ div.tag ul li a:hover, div.tag ul li a:focus {
   cursor: pointer;
   text-decoration: underline;
 }
+.search .explain_text {
+  margin: 5px 0 0;
+  padding: 0.8em;
+  line-height: 1.7em;
+  display: block;
+  background-color: #eee;
+  border-radius: 10px;
+}
 
 .m_search {
   width: 100% !important;
@@ -10004,7 +10012,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   width: 1em;
   height: 1em;
   position: absolute;
-  top: 0.32em;
+  top: 0.4em;
   left: 0.1em;
   color: #666;
 }
@@ -12253,6 +12261,13 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 .leftblock_nodemenu ul > li:last-child {
   border: none;
 }
+.leftblock_nodemenu ul > li.active a {
+  color: #0d50aa;
+  font-weight: bold;
+}
+.leftblock_nodemenu ul > li.active a:hover, .leftblock_nodemenu ul > li.active a:focus {
+  color: #093a7b;
+}
 .leftblock_nodemenu ul > li a {
   display: block;
   padding: 0.5em 1em 0.5em 1.2em;
@@ -12262,6 +12277,10 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
 }
 .leftblock_nodemenu ul > li a:hover {
   color: #f08436;
+}
+.leftblock_nodemenu ul > li a:focus {
+  color: #093a7b;
+  font-weight: bold;
 }
 .leftblock_nodemenu ul > li ul {
   display: none;
